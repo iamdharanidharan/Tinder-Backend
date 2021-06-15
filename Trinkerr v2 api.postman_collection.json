@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "32abed37-cea4-4d14-9e1e-3b452db5ac8b",
+		"name": "Trinkerr v2 api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Send signup otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\" : \"1234554321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://trinkerr-task-v2.herokuapp.com/auth/sendSignUpOTP",
+					"protocol": "https",
+					"host": [
+						"trinkerr-task-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"auth",
+						"sendSignUpOTP"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "validate sign up otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\" : \"1234554321\",\r\n    \"OTP\" : \"0000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://trinkerr-task-v2.herokuapp.com/auth/validateSignUpOTP",
+					"protocol": "https",
+					"host": [
+						"trinkerr-task-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"auth",
+						"validateSignUpOTP"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "createusertoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjEyMzQ1NTQzMjEiLCJtb2RlIjoiY3JlYXRlIHVzZXIiLCJpYXQiOjE2MjM3MTg2NjAsImV4cCI6MTYyMzgwNTA2MH0.XWrKb66R8Vd65FiFXwAlfPRQjD7oRVKcNU8TtWyCA4w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"testname\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://trinkerr-task-v2.herokuapp.com/auth/createUser",
+					"protocol": "https",
+					"host": [
+						"trinkerr-task-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"auth",
+						"createUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send sign in OTP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\" : \"1234554321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://trinkerr-task-v2.herokuapp.com/auth/sendSignInOTP",
+					"protocol": "https",
+					"host": [
+						"trinkerr-task-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"auth",
+						"sendSignInOTP"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validate sign in otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\" : \"1234554321\",\r\n    \"OTP\" : \"0000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://trinkerr-task-v2.herokuapp.com/auth/validateSignInOTP",
+					"protocol": "https",
+					"host": [
+						"trinkerr-task-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"auth",
+						"validateSignInOTP"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get images",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjEyMzQ1NTQzMjEiLCJtb2RlIjoibG9nZ2VkSW4iLCJpYXQiOjE2MjM3MTkwNDAsImV4cCI6MTYyMzgwNTQ0MH0.maB7Zdmk3N-kU78-gO5-hLDttOIs8dDKFmoBhqSStAs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://trinkerr-task-v2.herokuapp.com/user/images",
+					"protocol": "https",
+					"host": [
+						"trinkerr-task-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						"images"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add preference",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "authtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjEyMzQ1NTQzMjEiLCJtb2RlIjoibG9nZ2VkSW4iLCJpYXQiOjE2MjM3MTkwNDAsImV4cCI6MTYyMzgwNTQ0MH0.maB7Zdmk3N-kU78-gO5-hLDttOIs8dDKFmoBhqSStAs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isAccepted\" : true,\r\n    \"imageID\" : \"60c7c0ef6911127b80b29872\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://trinkerr-task-v2.herokuapp.com/user/addPreference",
+					"protocol": "https",
+					"host": [
+						"trinkerr-task-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						"addPreference"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get History",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjEyMzQ1NTQzMjEiLCJtb2RlIjoibG9nZ2VkSW4iLCJpYXQiOjE2MjM3MTkwNDAsImV4cCI6MTYyMzgwNTQ0MH0.maB7Zdmk3N-kU78-gO5-hLDttOIs8dDKFmoBhqSStAs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://trinkerr-task-v2.herokuapp.com/user/history",
+					"protocol": "https",
+					"host": [
+						"trinkerr-task-v2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						"history"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
